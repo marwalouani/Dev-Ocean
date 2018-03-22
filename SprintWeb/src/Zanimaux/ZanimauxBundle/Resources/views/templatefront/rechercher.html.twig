@@ -1,0 +1,254 @@
+{% extends '::front.html.twig' %}
+{% block body %}
+
+
+
+
+    <section>
+
+        <div class="container-fluid max-w-1280 margin-bottom">
+
+            <div class="row">
+                <div class="col-left-custom">
+                    <section id="animal-search-form" class="col-xs-12 no-padding">
+                        <div class="col-xs-12">
+                            <article class="col-xs-12 no-padding">
+                                <h1 class="block-form-search-title block-form-search-title-style-1">Trouvez l'animal qui <span class="font-style-2">vous</span> attend</h1>
+
+                                <form name="" method="get" action="https://www.secondechance.org/animal/recherche">
+                                    <div class="col-md-12 block-form-search block-form-search-style-1 no-padding">
+                                        <div class="col-md-6 clearfix">
+                                            <div class="form-group">
+                                                <select id="species" name="species" class="form-control"><option value="">Espèce</option><option value="1">Chien</option><option value="2">Chat</option><option value="3">Cheval</option><option value="9">Lapin</option><option value="4">Rongeur</option><option value="6">Furet</option><option value="5">Oiseau</option><option value="7">Reptile</option><option value="10">Animal de ferme</option><option value="8">Autres</option></select>
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <div id="sexes"><label class="checkbox-inline">
+                                                        <input type="checkbox" id="sexes_1" name="sexes[]"value="1"/>Mâle</label><label class="checkbox-inline">
+                                                        <input type="checkbox" id="sexes_2" name="sexes[]"value="2"/>Femelle</label></div>
+                                            </div>
+                                            <div class="checkbox">
+                                                <div id="sizes"><label class="checkbox-inline">
+                                                        <input type="checkbox" id="sizes_1" name="sizes[]"value="1"/>Petit</label><label class="checkbox-inline">
+                                                        <input type="checkbox" id="sizes_2" name="sizes[]"value="2"/>Moyen</label><label class="checkbox-inline">
+                                                        <input type="checkbox" id="sizes_3" name="sizes[]"value="3"/>Grand</label></div>
+                                            </div>
+                                            <div class="checkbox">
+                                                <div id="ageRanges"><label class="checkbox-inline required">
+                                                        <input type="checkbox" id="ageRanges_1" name="ageRanges[]"value="1"/>Bébé</label><label class="checkbox-inline required">
+                                                        <input type="checkbox" id="ageRanges_2" name="ageRanges[]"value="2"/>Junior</label><label class="checkbox-inline required">
+                                                        <input type="checkbox" id="ageRanges_3" name="ageRanges[]"value="3"/>Adulte</label><label class="checkbox-inline required">
+                                                        <input type="checkbox" id="ageRanges_4" name="ageRanges[]"value="4"/>Senior</label></div>
+                                            </div>
+
+                                            <span class="form-sub-title">Exclure les animaux : </span>
+                                            <div class="checkbox col-xs-12 excluded no-padding">
+                                                <label>
+                                                    <input type="checkbox" id="houseWithoutYoungChild" name="houseWithoutYoungChild"value="1"/>non conseillé pour les enfants</label>
+                                                <label>
+                                                    <input type="checkbox" id="houseWithoutDog" name="houseWithoutDog"value="1"/>qui ne s&#039;entendent pas avec les chiens</label>
+                                                <label>
+                                                    <input type="checkbox" id="houseWithoutCat" name="houseWithoutCat"value="1"/>qui ne s&#039;entendent pas avec les chats</label>
+                                                <label>
+                                                    <input type="checkbox" id="specialNeeds" name="specialNeeds"value="1"/>qui ont des besoins spécifiques</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select id="breed" name="breed" disabled="disabled" class="form-control"><option value="">Race</option></select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select id="fur" name="fur" class="form-control"><option value="">Pelage</option><option value="8">Ras</option><option value="2">Courts</option><option value="4">Mi-longs</option><option value="1">Longs</option><option value="6">Durs</option><option value="3">Poils indéfinis</option></select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select id="color" name="color" class="form-control"><option value="">Couleur</option><option value="78">Abricot</option><option value="52">Albinos</option><option value="38">Alezan</option><option value="46">Arlequin</option><option value="40">Bai</option><option value="42">Beige</option><option value="1">Blanc</option><option value="62">Blanc avec marque noire</option><option value="85">Bleu et blanc</option><option value="86">Bleu merle</option><option value="44">Bringé</option><option value="82">Caramel</option><option value="54">Champagne</option><option value="24">Chocolat</option><option value="26">Chocolat et blanc</option><option value="4">Couleur indéfinie</option><option value="28">Crème</option><option value="18">Ecaille de tortue</option><option value="3">Fauve </option><option value="48">Fauve charbonné </option><option value="8">Gris</option><option value="34">Gris et blanc</option><option value="68">Isabelle</option><option value="83">Marron</option><option value="84">Marron et blanc</option><option value="58">Merle</option><option value="2">Noir </option><option value="64">Noir avec marque blanche</option><option value="50">Noir et Feu  </option><option value="72">Noir et beige</option><option value="12">Noir et blanc</option><option value="70">Noir et gris</option><option value="89">Noir tri</option><option value="66">Pluricoloré</option><option value="56">Putoisé</option><option value="87">Rouge merle</option><option value="88">Rouge tri</option><option value="6">Roux</option><option value="14">Roux et blanc</option><option value="36">Sable</option><option value="81">Sanglier</option><option value="90">Seal point</option><option value="30">Tacheté</option><option value="10">Tigré</option><option value="80">Tigré blanc</option><option value="74">Tigré gris</option><option value="76">Tigré roux</option><option value="16">Tricolore</option></select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select id="region" name="region" class="form-control"><option value="">Région</option><option value="1">Alsace</option><option value="2">Aquitaine</option><option value="3">Auvergne</option><option value="4">Basse-Normandie</option><option value="5">Bourgogne</option><option value="6">Bretagne</option><option value="7">Centre</option><option value="8">Champagne-Ardenne</option><option value="9">Corse</option><option value="10">Franche-Comté</option><option value="11">Haute-Normandie</option><option value="12">Île-de-France</option><option value="13">Languedoc-Roussillon</option><option value="14">Limousin</option><option value="15">Lorraine</option><option value="16">Midi-Pyrénées</option><option value="17">Nord-Pas-de-Calais</option><option value="18">Pays de la Loire</option><option value="19">Picardie</option><option value="20">Poitou-Charentes</option><option value="21">Provence-Alpes-Côte d&#039;Azur</option><option value="22">Rhône-Alpes</option><option value="23">Outre-mer</option></select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select id="department" name="department" class="form-control"><option value="">Département</option><option value="89">01 - Ain</option><option value="76">02 - Aisne</option><option value="8">03 - Allier</option><option value="83">04 - Alpes-de-Haute-Provence</option><option value="84">05 - Hautes-Alpes</option><option value="85">06 - Alpes-Maritimes</option><option value="90">07 - Ardèche</option><option value="29">08 - Ardennes</option><option value="61">09 - Ariège</option><option value="30">10 - Aube</option><option value="49">11 - Aude</option><option value="62">12 - Aveyron</option><option value="86">13 - Bouches-du-Rhône</option><option value="12">14 - Calvados</option><option value="9">15 - Cantal</option><option value="79">16 - Charente</option><option value="80">17 - Charente-Maritime</option><option value="23">18 - Cher</option><option value="54">19 - Corrèze</option><option value="33">20 - Corse</option><option value="15">21 - Côte-d&#039;Or</option><option value="19">22 - Côtes-d&#039;Armor</option><option value="55">23 - Creuse</option><option value="3">24 - Dordogne</option><option value="35">25 - Doubs</option><option value="91">26 - Drôme</option><option value="39">27 - Eure</option><option value="24">28 - Eure-et-Loir</option><option value="20">29 - Finistère</option><option value="50">30 - Gard</option><option value="63">31 - Haute-Garonne</option><option value="64">32 - Gers</option><option value="4">33 - Gironde</option><option value="51">34 - Hérault</option><option value="21">35 - Ille-et-Vilaine</option><option value="25">36 - Indre</option><option value="26">37 - Indre-et-Loire</option><option value="92">38 - Isère</option><option value="36">39 - Jura</option><option value="5">40 - Landes</option><option value="27">41 - Loir-et-Cher</option><option value="93">42 - Loire</option><option value="10">43 - Haute-Loire</option><option value="71">44 - Loire-Atlantique</option><option value="28">45 - Loiret</option><option value="65">46 - Lot</option><option value="6">47 - Lot-et-Garonne</option><option value="52">48 - Lozère</option><option value="72">49 - Maine-et-Loire</option><option value="13">50 - Manche</option><option value="31">51 - Marne</option><option value="32">52 - Haute-Marne</option><option value="73">53 - Mayenne</option><option value="57">54 - Meurthe-et-Moselle</option><option value="58">55 - Meuse</option><option value="22">56 - Morbihan</option><option value="59">57 - Moselle</option><option value="16">58 - Nièvre</option><option value="69">59 - Nord</option><option value="77">60 - Oise</option><option value="14">61 - Orne</option><option value="70">62 - Pas-de-Calais</option><option value="11">63 - Puy-de-Dôme</option><option value="7">64 - Pyrénées-Atlantiques</option><option value="66">65 - Hautes-Pyrénées</option><option value="53">66 - Pyrénées-Orientales</option><option value="1">67 - Bas-Rhin</option><option value="2">68 - Haut-Rhin</option><option value="94">69 - Rhône</option><option value="37">70 - Haute-Saône</option><option value="17">71 - Saône-et-Loire</option><option value="74">72 - Sarthe</option><option value="95">73 - Savoie</option><option value="96">74 - Haute-Savoie</option><option value="41">75 - Paris</option><option value="40">76 - Seine-Maritime</option><option value="42">77 - Seine-et-Marne</option><option value="43">78 - Yvelines</option><option value="81">79 - Deux-Sèvres</option><option value="78">80 - Somme</option><option value="67">81 - Tarn</option><option value="68">82 - Tarn-et-Garonne</option><option value="87">83 - Var</option><option value="88">84 - Vaucluse</option><option value="75">85 - Vendée</option><option value="82">86 - Vienne</option><option value="56">87 - Haute-Vienne</option><option value="60">88 - Vosges</option><option value="18">89 - Yonne</option><option value="38">90 - Territoire de Belfort</option><option value="44">91 - Essonne</option><option value="45">92 - Hauts-de-Seine</option><option value="46">93 - Seine-Saint-Denis</option><option value="47">94 - Val-de-Marne</option><option value="48">95 - Val-d&#039;Oise</option><option value="97">971 - Guadeloupe</option><option value="98">972 - Martinique</option><option value="99">973 - Guyane</option><option value="100">974 - Réunion</option><option value="101">975 - Saint-Pierre-et-Miquelon</option><option value="102">976 - Mayotte</option><option value="103">986 - Wallis-et-Futuna</option><option value="104">987 - Polynésie française</option><option value="105">988 - Nouvelle-Calédonie</option></select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>
+                                                    <input type="checkbox" id="withNeighborsDepartments" name="withNeighborsDepartments"value="1"/>Ajouter les départements limitrophes</label>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-12 no-padding">
+                                            <div class="col-md-6 col-md-offset-6">
+                                                <button type="submit" >Allez <span class="font-style-2 search-pet-home">cherche !</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>                        </article>
+                        </div>
+                    </section>
+                    <div class="col-xs-12 no-padding">
+
+
+                        <div class="well text-center">
+                            <p>
+                                Nous nous efforçons de trouver des refuges adhérents dans tous les départements et notre liste s'enrichit de jours en jours alors revenez nous voir prochainement.<br/>
+                                Vous pouvez <a href="../inscription/particulier.html">créer un compte</a> pour vous abonner à notre newsletter, être informé des mises à jour et profiter d'offres spéciales.
+                            </p> <p>
+                                Vous souhaitez faire apparaitre votre organisme sur Seconde Chance ? <a href="../adherer.html">Rejoignez-nous !</a>
+                            </p> <p>
+                                Nous vous invitons à consulter également la <a href="../refuge/recherche.html">liste des refuges</a> pour trouver un organisme près de chez vous. <br/>
+                                Vous pourrez accéder à leur site Internet pour connaitre les animaux disponibles à l'adoption.
+                            </p>
+
+                        </div>
+
+                        <section id="animals-forward">
+
+                            <div class="col-sm-4 col-xs-12">
+                                <article class="panel">
+                                    <div class="panel-body">
+                                        <img src="../uploads/anim_thumbnail/58/586402/500_8c81f8e3e795140b758c7cedddc8cfea.jpg" alt="Kayser" class="img-responsive center-block"
+                                             onerror="this.onerror=null; this.src = '../img/defaults/chien.png';"
+                                        />
+                                        <span class="font-style-2">Chien</span>
+                                    </div>
+                                    <div class="panel-footer bg-style-1">
+                                        <a href="chien-american-stafford-kayser-586402.html" title="En savoir plus">
+                                            <h3 class="animal-name">Kayser</h3>
+                                            <p>
+                                                <span class="text-block">Mâle - Pourquoi pas moi ?</span>
+                                                <span class="text-block">SPA de Dole et sa région - Refuge de Biarne</span>
+                                                <span class="text-block">Biarne (39290)</span>
+                                            </p>
+                                            <i class="glyphicon glyphicon-plus-sign"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <article class="panel">
+                                    <div class="panel-body">
+                                        <img src="../uploads/anim_thumbnail/34/348500/500_ef698500716b18acefc84b8cf53c2abc.jpg" alt="MEIKO" class="img-responsive center-block"
+                                             onerror="this.onerror=null; this.src = '../img/defaults/chien.png';"
+                                        />
+                                        <span class="font-style-2">Chien</span>
+                                    </div>
+                                    <div class="panel-footer bg-style-1">
+                                        <a href="chien-braque-allemand-meiko-348500.html" title="En savoir plus">
+                                            <h3 class="animal-name">MEIKO</h3>
+                                            <p>
+                                                <span class="text-block">Mâle - Pourquoi pas moi ?</span>
+                                                <span class="text-block">SPA de Dole et sa région - Refuge de Biarne</span>
+                                                <span class="text-block">Biarne (39290)</span>
+                                            </p>
+                                            <i class="glyphicon glyphicon-plus-sign"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-4 col-xs-12">
+                                <article class="panel">
+                                    <div class="panel-body">
+                                        <img src="../uploads/anim_thumbnail/39/393624/500_a8c37301a039a7a505ae243a506224f7.jpg" alt="OPHELIE" class="img-responsive center-block"
+                                             onerror="this.onerror=null; this.src = '../img/defaults/chat.png';"
+                                        />
+                                        <span class="font-style-2">Chat</span>
+                                    </div>
+                                    <div class="panel-footer bg-style-1">
+                                        <a href="chat-europeen-ophelie-393624.html" title="En savoir plus">
+                                            <h3 class="animal-name">OPHELIE</h3>
+                                            <p>
+                                                <span class="text-block">Femelle - Pourquoi pas moi ?</span>
+                                                <span class="text-block">Comité du chat</span>
+                                                <span class="text-block">SEVRAN (93270)</span>
+                                            </p>
+                                            <i class="glyphicon glyphicon-plus-sign"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </section>
+                        <div class="col-xs-12 no-padding">
+                            <section id="testimony" class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <h2 class="col-xs-12 col-sm-8 title title-style-3">Ils partagent leur expérience d&#039;adoption</h2>
+                                        <a href="../temoignages.html" class="col-xs-12 col-sm-4 btn btn-style-2 font-style-1 margin-top">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                            Poster un témoignage
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12 col-lg-12 testimony-posts txt-white">
+
+                                    <article class="col-sm-12 col-md-4">
+                                        <div class="icon-bubble-orange-1 icon-testimony hidden-sm hidden-xs"><span class="fa fa-heart"></span> </div>
+                                        <a href="../temoignages/denise-sula-spa-de-la-reunion-152.html" title="En savoir plus">
+                                            <h3 class="font-style-1">Denise Sula & SPA de la Réunion</h3>
+                                            <span>Lettre de remerciements.</span>
+                                        </a>
+                                    </article>
+                                    <article class="col-sm-12 col-md-4">
+                                        <div class="icon-bubble-orange-1 icon-testimony hidden-sm hidden-xs"><span class="fa fa-heart"></span> </div>
+                                        <a href="../temoignages/labecot-lucie-torra-151.html" title="En savoir plus">
+                                            <h3 class="font-style-1">labecot lucie & Torra</h3>
+                                            <span>J&#39;ai eu la chance d&#39;aller dans ce refuge o&ugrave;u se trouvait ma tr&egrave;s belle fille. Elle a eu un pass&eacute; dificile,,,,...</span>
+                                        </a>
+                                    </article>
+                                    <article class="col-sm-12 col-md-4">
+                                        <div class="icon-bubble-orange-1 icon-testimony hidden-sm hidden-xs"><span class="fa fa-heart"></span> </div>
+                                        <a href="../temoignages/corinne-association-acr-150.html" title="En savoir plus">
+                                            <h3 class="font-style-1">Corinne & Association ACR</h3>
+                                            <span>Je tenais aussi &agrave; vous remercier car gr&acirc;ce &agrave; votre s&eacute;lection et &nbsp;le post sur Seconde Chance, nous avons...</span>
+                                        </a>
+                                    </article>
+
+                                </div>
+                                <div class="col-xs-12 text-center">
+                                    <a href="../temoignages.html" title="Voir tout" class="btn btn-see-all font-style-1">
+                                        Voir tout
+                                    </a>
+                                </div>
+
+                            </section>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-right-fixed">
+
+                    <aside class="iframe-advert iframe-advert-col-right margin-top" id="div-gpt-pub-body">
+
+                        <script>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-pub-body'); });
+                        </script>
+
+                    </aside>            </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <aside class="hidden-lg hidden-md text-center" id="div-gpt-pub-footer">
+
+        <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-pub-footer'); });
+        </script>
+
+    </aside>
+
+    <script src="../js/core1caa.js?v1510648692"></script>
+
+
+
+{% endblock %}
