@@ -33,7 +33,7 @@ class Journee
      *
      * @ORM\Column(name="nbr_rdv", type="integer", nullable=false)
      */
-    private $nbrRdv = '1';
+    private $nbrRdv;
 
 
 }

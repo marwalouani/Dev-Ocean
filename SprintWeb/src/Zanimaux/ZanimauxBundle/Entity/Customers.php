@@ -54,7 +54,7 @@ class Customers
      *
      * @ORM\Column(name="Balance", type="float", precision=10, scale=0, nullable=true)
      */
-    private $balance = '50';
+    private $balance;
 
 
 }

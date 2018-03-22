@@ -26,7 +26,7 @@ class Orders
      *
      * @ORM\Column(name="Quantity", type="boolean", nullable=true)
      */
-    private $quantity = '1';
+    private $quantity;
 
     /**
      * @var \Products

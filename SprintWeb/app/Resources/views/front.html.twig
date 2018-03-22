@@ -311,7 +311,8 @@
     <div class="content-header header-default"></div>
 </header>
 <body>
-<div id="content">{% block body %} {% endblock %}</div>
+<div id="content">{% block body %} {% block formulaire %} {% endblock %} {% endblock %}</div>
+
 {% block footer %}
 <div id="footer">
     <footer class="bg-style-1">

@@ -96,7 +96,7 @@ class Personne
      *
      * @ORM\Column(name="enabled", type="integer", nullable=true)
      */
-    private $enabled = '0';
+    private $enabled;
 
     /**
      * @var string
@@ -124,7 +124,7 @@ class Personne
      *
      * @ORM\Column(name="jetons", type="integer", nullable=false)
      */
-    private $jetons = '50';
+    private $jetons;
 
 
 }
