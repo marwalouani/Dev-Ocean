@@ -1,4 +1,0 @@
-services:
-#    zanimaux_zanimaux.example:
-#        class: Zanimaux\ZanimauxBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
